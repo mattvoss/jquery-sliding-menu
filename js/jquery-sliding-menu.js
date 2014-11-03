@@ -72,6 +72,17 @@
 						link.attr('class', item.styleClass);
 						link.attr('href', item.href);
 						link.text(item.label);
+						if (item.ngclick) {
+						   link.attr('ng-click', item.ngclick+"()");
+						}
+						
+						if (item.id) {
+						   link.attr('id', item.id);
+						}
+						
+						if (item.data) {
+						   link.data(data);
+						}
 
 						var li = $('<li></li>');
 
