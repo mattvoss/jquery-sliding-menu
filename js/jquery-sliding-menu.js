@@ -70,10 +70,12 @@
 						var link = $('<a></a>');
 
 						link.attr('class', item.styleClass);
-						link.attr('href', item.href);
 						link.text(item.label);
 						if (item.ngclick) {
 						   link.attr('ng-click', item.ngclick+"()");
+						   link.attr('href');
+						} else {
+						   link.attr('href', item.href);
 						}
 						
 						if (item.id) {
