@@ -72,7 +72,6 @@
 						link.attr('class', item.styleClass);
 						link.text(item.label);
 						if (item.ngclick) {
-						   link.attr('ng-click', item.ngclick+"()");
 						   link.attr('href', "#/");
 						} else {
 						   link.attr('href', item.href);
@@ -87,7 +86,9 @@
 						}
 
 						var li = $('<li></li>');
-
+						if (item.ngclick) {
+						   li.attr('ng-click', item.ngclick+"()");
+						}
 						li.append(link);
 
 						panel.append(li);
