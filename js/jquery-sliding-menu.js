@@ -71,11 +71,7 @@
 
 						link.attr('class', item.styleClass);
 						link.text(item.label);
-						if (item.ngclick) {
-						   link.attr('href', "#/");
-						} else {
-						   link.attr('href', item.href);
-						}
+						link.attr('href', item.href);
 						
 						if (item.id) {
 						   link.attr('id', item.id);
